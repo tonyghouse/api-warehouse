@@ -1,4 +1,4 @@
-package com.ghouse.apibase.exception;
+package com.ghouse.apiwarehouse.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

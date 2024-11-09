@@ -1,7 +1,7 @@
-package com.ghouse.apibase.service;
+package com.ghouse.apiwarehouse.service;
 
-import com.ghouse.apibase.entity.UserPlatform;
-import com.ghouse.apibase.repo.UserPlatformRepo;
+import com.ghouse.apiwarehouse.entity.Section;
+import com.ghouse.apiwarehouse.repo.UserPlatformRepo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ public class UserPlatformServiceImpl implements UserPlatformService {
 
 
 	@Override
-	public List<UserPlatform> getUserPlatformsByUserId(String userId) {
+	public List<Section> getUserPlatformsByUserId(String userId) {
 		return userPlatformRepo.findByUserId(userId);
 	}
 }

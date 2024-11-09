@@ -1,4 +1,4 @@
-package com.ghouse.apibase.mapper;
+package com.ghouse.apiwarehouse.mapper;
 
 import org.mapstruct.Mapper;
 

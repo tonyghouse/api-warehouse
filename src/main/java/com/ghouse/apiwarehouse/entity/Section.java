@@ -1,4 +1,4 @@
-package com.ghouse.apibase.entity;
+package com.ghouse.apiwarehouse.entity;
 
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;

@@ -1,4 +1,4 @@
-package com.ghouse.apibase.dto;
+package com.ghouse.apiwarehouse.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

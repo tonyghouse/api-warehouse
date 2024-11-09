@@ -1,7 +1,7 @@
-package com.ghouse.apibase.controller;
+package com.ghouse.apiwarehouse.controller;
 
-import com.ghouse.apibase.entity.UserPlatform;
-import com.ghouse.apibase.service.UserPlatformService;
+import com.ghouse.apiwarehouse.entity.Section;
+import com.ghouse.apiwarehouse.service.UserPlatformService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +22,8 @@ public class UserPlatformController {
     private UserPlatformService userPlatformService;
 
     @GetMapping(value = "/user-platforms/{userId}", produces = "application/json")
-    public ResponseEntity<List<UserPlatform>> getUserPlatforms(@PathVariable String userId) {
-        List<UserPlatform> results = userPlatformService.getUserPlatformsByUserId(userId);
+    public ResponseEntity<List<Section>> getUserPlatforms(@PathVariable String userId) {
+        List<Section> results = userPlatformService.getUserPlatformsByUserId(userId);
         return new ResponseEntity<>(results, HttpStatus.OK);
     }
 
