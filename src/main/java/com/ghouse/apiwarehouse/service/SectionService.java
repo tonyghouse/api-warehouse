@@ -1,10 +1,11 @@
 package com.ghouse.apiwarehouse.service;
 
+import com.ghouse.apiwarehouse.dto.SectionInfo;
 import com.ghouse.apiwarehouse.entity.Section;
 
 import java.util.List;
 
-public interface UserPlatformService {
+public interface SectionService {
 
-	List<Section> getUserPlatformsByUserId(String userId);
+	List<SectionInfo> getSections();
 }

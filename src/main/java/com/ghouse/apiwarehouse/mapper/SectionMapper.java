@@ -3,7 +3,7 @@ package com.ghouse.apiwarehouse.mapper;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
-public interface UserPlatformMapper {
+public interface SectionMapper {
 
 
 //

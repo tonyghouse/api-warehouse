@@ -1,10 +1,7 @@
 package com.ghouse.apiwarehouse.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
@@ -12,17 +9,14 @@ import java.util.List;
 @Getter
 @Setter
 @AllArgsConstructor
-public class Problem {
+@NoArgsConstructor
+public class ProblemInfo {
 	
-	@JsonProperty("sectionId")
-	private Integer sectionId;
+	@JsonProperty("problemId")
+	private String problemId;
 
-	@JsonProperty("sectionName")
-	private String sectionName;
-
-	@JsonProperty("questions")
-	private List<Problem> questions;
-
+	@JsonProperty("problemName")
+	private String problemName;
 	
 
 }

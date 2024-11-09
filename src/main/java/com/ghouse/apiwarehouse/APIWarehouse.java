@@ -1,4 +1,4 @@
-package com.ghouse.apibase;
+package com.ghouse.apiwarehouse;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,11 +8,11 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
-public class APIBaseTemplate {
+public class APIWarehouse {
 
 	public static void main(String[] args) {
 
-		SpringApplication.run(APIBaseTemplate.class, args);
+		SpringApplication.run(APIWarehouse.class, args);
 	}
 	
 	 @Bean

@@ -10,13 +10,21 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "section")
-public class Section {
+@Table(name = "problem")
+public class Problem {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer sectionId;
-	
-	private String sectionName;
+	@Column(name = "problem_id")
+	private String problemId;
+
+	@Column(name = "name")
+	private String name;
+
+	@Column(name = "sort_order")
+	private Integer sortOrder;
+
+	@ManyToOne
+	@JoinColumn(name="section_id", nullable=false)
+	private Section section;
 
 }

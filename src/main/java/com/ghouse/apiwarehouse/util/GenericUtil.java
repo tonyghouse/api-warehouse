@@ -1,4 +1,4 @@
-package com.ghouse.apibase.util;
+package com.ghouse.apiwarehouse.util;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

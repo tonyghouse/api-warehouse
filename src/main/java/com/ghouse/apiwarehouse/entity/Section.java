@@ -1,12 +1,9 @@
 package com.ghouse.apiwarehouse.entity;
 
 import lombok.*;
-import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Getter
@@ -14,16 +11,20 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "user_platform")
-public class UserPlatform {
+@Table(name = "section")
+public class Section {
 
 	@Id
-	@GeneratedValue(generator = "user-platform-uuid")
-	@GenericGenerator(name = "user-platform-uuid", strategy = "uuid")
-	private String userPlatformId;
-	
-	private String userId;
-	
-	private String platform;
+	@Column(name = "section_id")
+	private String sectionId;
+
+	@Column(name = "name")
+	private String name;
+
+	@Column(name = "sort_order")
+	private Integer sortOrder;
+
+	@OneToMany(mappedBy="section", fetch = FetchType.EAGER)
+	private List<Problem> problems;
 
 }

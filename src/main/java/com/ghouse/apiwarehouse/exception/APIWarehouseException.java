@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class APIBaseException {
+public class APIWarehouseException {
     private String errorMessage;
     private String errorCode;
 }

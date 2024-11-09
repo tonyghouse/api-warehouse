@@ -1,29 +1,29 @@
 package com.ghouse.apiwarehouse.controller;
 
+import com.ghouse.apiwarehouse.dto.SectionInfo;
 import com.ghouse.apiwarehouse.entity.Section;
-import com.ghouse.apiwarehouse.service.UserPlatformService;
+import com.ghouse.apiwarehouse.service.SectionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
-public class UserPlatformController {
+public class SectionController {
 
-    private static final Logger log = LoggerFactory.getLogger(UserPlatformController.class);
+    private static final Logger log = LoggerFactory.getLogger(SectionController.class);
 
     @Autowired
-    private UserPlatformService userPlatformService;
+    private SectionService sectionService;
 
-    @GetMapping(value = "/user-platforms/{userId}", produces = "application/json")
-    public ResponseEntity<List<Section>> getUserPlatforms(@PathVariable String userId) {
-        List<Section> results = userPlatformService.getUserPlatformsByUserId(userId);
+    @GetMapping(value = "/sections", produces = "application/json")
+    public ResponseEntity<List<SectionInfo>> getSections() {
+        List<SectionInfo> results = sectionService.getSections();
         return new ResponseEntity<>(results, HttpStatus.OK);
     }
 

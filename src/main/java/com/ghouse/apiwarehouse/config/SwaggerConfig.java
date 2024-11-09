@@ -1,4 +1,4 @@
-package com.ghouse.apibase.config;
+package com.ghouse.apiwarehouse.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,14 +20,14 @@ public class SwaggerConfig {
 	public Docket swaggerConfigDocket() {
 
 		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.basePackage("com.ghouse.socialraven")).build().apiInfo(swaggerApiInfo());
+				.apis(RequestHandlerSelectors.basePackage("com.ghouse.apiwarehouse")).build().apiInfo(swaggerApiInfo());
 	}
 
 	public ApiInfo swaggerApiInfo() {
 
-		return new ApiInfo("Socialraven API", "Socialraven-Spring Boot Application developed by Ghouse", "v 1.0",
+		return new ApiInfo("APIWarehouse API", "APIWarehouse-Spring Boot Application developed by TonyGhouse", "v 1.0",
 				"No Terms & Conditions",
-				new springfox.documentation.service.Contact("Ghouse", "tonyghouse.com", "tonyghosueofficial@gmail.com"),
+				new springfox.documentation.service.Contact("Tony Ghouse", "tonyghouse.com", "tonyghosueofficial@gmail.com"),
 				"GPL-2.0 License", "https://opensource.org/licenses/GPL-2.0", Collections.emptyList());
 
 	}

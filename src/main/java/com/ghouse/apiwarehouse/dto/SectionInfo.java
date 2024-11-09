@@ -1,25 +1,26 @@
 package com.ghouse.apiwarehouse.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+
+import java.util.List;
 
 @Data
 @Getter
 @Setter
 @AllArgsConstructor
-public class UserPlatformDetails {
+@NoArgsConstructor
+public class SectionInfo {
 	
-	@JsonProperty("templateId")
-	private String templateId;
-	
-	@JsonProperty("templateName")
-	private String templateName;
-	
-	@JsonProperty("author")
-	private String author;
+	@JsonProperty("sectionId")
+	private String sectionId;
+
+	@JsonProperty("sectionName")
+	private String sectionName;
+
+	@JsonProperty("problems")
+	private List<ProblemInfo> problems;
+
 	
 
 }
