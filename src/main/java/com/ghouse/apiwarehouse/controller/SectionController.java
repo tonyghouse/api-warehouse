@@ -1,6 +1,6 @@
 package com.ghouse.apiwarehouse.controller;
 
-import com.ghouse.apiwarehouse.dto.SectionInfo;
+import com.ghouse.apiwarehouse.dto.SectionInfoDto;
 import com.ghouse.apiwarehouse.service.SectionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,8 +21,8 @@ public class SectionController {
     private SectionService sectionService;
 
     @GetMapping(value = "/sections", produces = "application/json")
-    public ResponseEntity<List<SectionInfo>> getSections() {
-        List<SectionInfo> results = sectionService.getSections();
+    public ResponseEntity<List<SectionInfoDto>> getSections() {
+        List<SectionInfoDto> results = sectionService.getSections();
         return new ResponseEntity<>(results, HttpStatus.OK);
     }
 

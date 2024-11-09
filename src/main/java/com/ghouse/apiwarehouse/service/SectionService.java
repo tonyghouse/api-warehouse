@@ -1,7 +1,7 @@
 package com.ghouse.apiwarehouse.service;
 
-import com.ghouse.apiwarehouse.dto.ProblemInfo;
-import com.ghouse.apiwarehouse.dto.SectionInfo;
+import com.ghouse.apiwarehouse.dto.ProblemInfoDto;
+import com.ghouse.apiwarehouse.dto.SectionInfoDto;
 import com.ghouse.apiwarehouse.entity.Problem;
 import com.ghouse.apiwarehouse.entity.Section;
 import com.ghouse.apiwarehouse.repo.ProblemRepo;
@@ -28,32 +28,32 @@ public class SectionService{
 	private ProblemRepo problemRepo;
 
 
-	public List<SectionInfo> getSections() {
-		List<SectionInfo> sectionInfoList = new ArrayList<>();
-		List<Section> sections = sectionRepo.findAll();
+	public List<SectionInfoDto> getSections() {
+		List<SectionInfoDto> sectionInfoDtoList = new ArrayList<>();
+		List<Section> sectionEntities = sectionRepo.findAll();
 
-		for(Section section : sections){
-			SectionInfo sectionInfo = new SectionInfo();
-			sectionInfo.setSectionId(section.getSectionId());
-			sectionInfo.setSectionName(section.getName());
+		for(Section section : sectionEntities){
+			SectionInfoDto sectionInfoDto = new SectionInfoDto();
+			sectionInfoDto.setSectionId(section.getSectionId());
+			sectionInfoDto.setSectionName(section.getName());
 			List<Problem> problems = section.getProblems();
-			List<ProblemInfo> problemInfos = mapToProblemInfos(problems);
-			sectionInfo.setProblems(problemInfos);
-			sectionInfoList.add(sectionInfo);
+			List<ProblemInfoDto> problemInfoDtos = mapToProblemInfos(problems);
+			sectionInfoDto.setProblems(problemInfoDtos);
+			sectionInfoDtoList.add(sectionInfoDto);
 		}
-		return sectionInfoList;
+		return sectionInfoDtoList;
 	}
 
-	private List<ProblemInfo> mapToProblemInfos(List<Problem> problems) {
-		List<ProblemInfo> problemInfos = new ArrayList<>();
+	private List<ProblemInfoDto> mapToProblemInfos(List<Problem> problems) {
+		List<ProblemInfoDto> problemInfoDtos = new ArrayList<>();
 		for(Problem problem : problems){
-			ProblemInfo problemInfo = new ProblemInfo();
-			problemInfo.setProblemId(problem.getProblemId());
-			problemInfo.setProblemName(problem.getName());
+			ProblemInfoDto problemInfoDto = new ProblemInfoDto();
+			problemInfoDto.setProblemId(problem.getProblemId());
+			problemInfoDto.setProblemName(problem.getName());
 
-			problemInfos.add(problemInfo);
+			problemInfoDtos.add(problemInfoDto);
 		}
 
-		return problemInfos;
+		return problemInfoDtos;
 	}
 }

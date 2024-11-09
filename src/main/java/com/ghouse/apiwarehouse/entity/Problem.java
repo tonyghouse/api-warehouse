@@ -1,9 +1,12 @@
 package com.ghouse.apiwarehouse.entity;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import lombok.*;
 
 import javax.persistence.*;
 
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 @Data
 @Getter
 @Setter
@@ -19,6 +22,16 @@ public class Problem {
 
 	@Column(name = "name")
 	private String name;
+
+	@Column(name = "description")
+	private String description;
+
+	@Column(name = "difficulty")
+	private String difficulty;
+
+	@Column(name = "tags", columnDefinition = "jsonb")
+	@JdbcTypeCode(SqlTypes.JSON)
+	private JsonNode tags;
 
 	@Column(name = "sort_order")
 	private Integer sortOrder;
