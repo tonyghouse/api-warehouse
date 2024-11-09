@@ -1,7 +1,6 @@
 package com.ghouse.apiwarehouse.controller;
 
 import com.ghouse.apiwarehouse.dto.SectionInfo;
-import com.ghouse.apiwarehouse.entity.Section;
 import com.ghouse.apiwarehouse.service.SectionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

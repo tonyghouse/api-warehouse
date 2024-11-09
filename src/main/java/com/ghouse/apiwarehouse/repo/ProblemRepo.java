@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface ProblemRepo extends JpaRepository<Problem,Integer> {
+public interface ProblemRepo extends JpaRepository<Problem,String> {
 
 }
