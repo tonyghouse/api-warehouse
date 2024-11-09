@@ -1,6 +1,6 @@
-package com.ghouse.apiwarehouse.repo;
+package com.ghouse.apiwarehouse.project5010.repo;
 
-import com.ghouse.apiwarehouse.entity.CodeSolution;
+import com.ghouse.apiwarehouse.project5010.entity.CodeSolution;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

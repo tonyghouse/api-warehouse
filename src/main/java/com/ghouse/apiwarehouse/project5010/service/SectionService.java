@@ -1,19 +1,19 @@
-package com.ghouse.apiwarehouse.service;
+package com.ghouse.apiwarehouse.project5010.service;
 
-import com.ghouse.apiwarehouse.dto.ProblemInfoDto;
-import com.ghouse.apiwarehouse.dto.SectionInfoDto;
-import com.ghouse.apiwarehouse.entity.Problem;
-import com.ghouse.apiwarehouse.entity.Section;
-import com.ghouse.apiwarehouse.repo.ProblemRepo;
-import com.ghouse.apiwarehouse.repo.SectionRepo;
+import com.ghouse.apiwarehouse.project5010.dto.ProblemInfoDto;
+import com.ghouse.apiwarehouse.project5010.dto.SectionInfoDto;
+import com.ghouse.apiwarehouse.project5010.entity.Problem;
+import com.ghouse.apiwarehouse.project5010.entity.Section;
+import com.ghouse.apiwarehouse.project5010.repo.ProblemRepo;
+import com.ghouse.apiwarehouse.project5010.repo.SectionRepo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
+import static java.util.Collections.emptyList;
 import static java.util.stream.Collectors.groupingBy;
 
 @Service
@@ -30,14 +30,18 @@ public class SectionService{
 
 	public List<SectionInfoDto> getSections() {
 		List<SectionInfoDto> sectionInfoDtoList = new ArrayList<>();
-		List<Section> sectionEntities = sectionRepo.findAllByOrderBySortOrder();
+		List<Section> sections = sectionRepo.findAllByOrderBySortOrder();
+		List<Problem> problems = problemRepo.findAll();
+		Map<String, List<Problem>> problemsMap = problems.stream()
+				.collect(groupingBy(Problem::getSectionId));
 
-		for(Section section : sectionEntities){
+
+		for(Section section : sections){
 			SectionInfoDto sectionInfoDto = new SectionInfoDto();
 			sectionInfoDto.setSectionId(section.getSectionId());
 			sectionInfoDto.setSectionName(section.getName());
-			List<Problem> problems = section.getProblems();
-			List<ProblemInfoDto> problemInfoDtos = mapToProblemInfos(problems);
+			List<Problem> problemsRelated = problemsMap.getOrDefault(section.getSectionId(), emptyList());
+			List<ProblemInfoDto> problemInfoDtos = mapToProblemInfos(problemsRelated);
 			sectionInfoDto.setProblems(problemInfoDtos);
 			sectionInfoDtoList.add(sectionInfoDto);
 		}

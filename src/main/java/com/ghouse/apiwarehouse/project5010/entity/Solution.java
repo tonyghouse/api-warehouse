@@ -1,4 +1,4 @@
-package com.ghouse.apiwarehouse.entity;
+package com.ghouse.apiwarehouse.project5010.entity;
 
 import lombok.*;
 

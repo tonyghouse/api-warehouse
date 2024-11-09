@@ -1,7 +1,7 @@
-package com.ghouse.apiwarehouse.controller;
+package com.ghouse.apiwarehouse.project5010.controller;
 
-import com.ghouse.apiwarehouse.dto.SectionInfoDto;
-import com.ghouse.apiwarehouse.service.SectionService;
+import com.ghouse.apiwarehouse.project5010.dto.SectionInfoDto;
+import com.ghouse.apiwarehouse.project5010.service.SectionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

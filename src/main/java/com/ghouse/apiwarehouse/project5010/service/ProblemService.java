@@ -1,13 +1,13 @@
-package com.ghouse.apiwarehouse.service;
+package com.ghouse.apiwarehouse.project5010.service;
 
-import com.ghouse.apiwarehouse.dto.CodeSolutionDto;
-import com.ghouse.apiwarehouse.dto.ProblemDetailsDto;
-import com.ghouse.apiwarehouse.dto.TestCaseDto;
-import com.ghouse.apiwarehouse.entity.CodeSolution;
-import com.ghouse.apiwarehouse.entity.Problem;
-import com.ghouse.apiwarehouse.entity.Solution;
-import com.ghouse.apiwarehouse.entity.TestCase;
-import com.ghouse.apiwarehouse.repo.*;
+import com.ghouse.apiwarehouse.project5010.dto.CodeSolutionDto;
+import com.ghouse.apiwarehouse.project5010.dto.ProblemDetailsDto;
+import com.ghouse.apiwarehouse.project5010.dto.TestCaseDto;
+import com.ghouse.apiwarehouse.project5010.entity.CodeSolution;
+import com.ghouse.apiwarehouse.project5010.entity.Problem;
+import com.ghouse.apiwarehouse.project5010.entity.Solution;
+import com.ghouse.apiwarehouse.project5010.entity.TestCase;
+import com.ghouse.apiwarehouse.project5010.repo.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

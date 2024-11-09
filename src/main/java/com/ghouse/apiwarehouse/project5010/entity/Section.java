@@ -1,4 +1,4 @@
-package com.ghouse.apiwarehouse.entity;
+package com.ghouse.apiwarehouse.project5010.entity;
 
 import lombok.*;
 
@@ -24,7 +24,7 @@ public class Section {
 	@Column(name = "sort_order")
 	private Integer sortOrder;
 
-	@OneToMany(mappedBy="section", fetch = FetchType.EAGER)
+	@OneToMany(mappedBy="section", fetch = FetchType.LAZY)
 	private List<Problem> problems;
 
 }

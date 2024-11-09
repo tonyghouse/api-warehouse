@@ -1,4 +1,4 @@
-package com.ghouse.apiwarehouse.dto;
+package com.ghouse.apiwarehouse.project5010.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;

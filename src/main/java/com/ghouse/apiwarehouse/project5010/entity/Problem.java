@@ -1,4 +1,4 @@
-package com.ghouse.apiwarehouse.entity;
+package com.ghouse.apiwarehouse.project5010.entity;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import lombok.*;
@@ -39,5 +39,12 @@ public class Problem {
 	@ManyToOne
 	@JoinColumn(name="section_id", nullable=false)
 	private Section section;
+
+	@Transient
+	private String sectionId;
+
+	public String getSectionId() {
+		return section != null ? section.getSectionId() : null;
+	}
 
 }

@@ -1,4 +1,4 @@
-package com.ghouse.apiwarehouse.controller;
+package com.ghouse.apiwarehouse.project5010.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
