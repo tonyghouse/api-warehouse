@@ -1,4 +1,4 @@
-package com.ghouse.apiwarehouse.config;
+package com.ghouse.apiwarehouse.common.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

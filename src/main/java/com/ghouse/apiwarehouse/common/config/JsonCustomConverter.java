@@ -1,4 +1,4 @@
-package com.ghouse.apiwarehouse.config;
+package com.ghouse.apiwarehouse.common.config;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
