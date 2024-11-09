@@ -30,7 +30,7 @@ public class SectionService{
 
 	public List<SectionInfoDto> getSections() {
 		List<SectionInfoDto> sectionInfoDtoList = new ArrayList<>();
-		List<Section> sectionEntities = sectionRepo.findAll();
+		List<Section> sectionEntities = sectionRepo.findAllByOrderBySortOrder();
 
 		for(Section section : sectionEntities){
 			SectionInfoDto sectionInfoDto = new SectionInfoDto();
