@@ -16,6 +16,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import static java.util.Comparator.comparing;
 
 
 @Service
@@ -86,6 +87,8 @@ public class ProblemService {
 			codeSolutionDtos.add(codeSolutionDto);
 
 		}
+		codeSolutionDtos.sort(comparing(CodeSolutionDto::getLanguage).reversed());
+
 		problemDetailsDto.setCodeSolutionDtos(codeSolutionDtos);
 		return problemDetailsDto;
 	}
