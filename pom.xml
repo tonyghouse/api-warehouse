@@ -10,8 +10,8 @@
 	<groupId>com.ghouse</groupId>
 	<artifactId>memoirist</artifactId>
 	<version>0.0.1</version>
-	<name>memoirist</name>
-	<description>day logging tool</description>
+	<name>api-warehouse</name>
+	<description>misc api project</description>
 	<properties>
 		<java.version>11</java.version>
 		<org.mapstruct.version>1.5.3.Final</org.mapstruct.version>
@@ -85,15 +85,16 @@
 			<artifactId>junit-vintage-engine</artifactId>
 			<scope>compile</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.hibernate.orm</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>6.2.0.Final</version>
 		</dependency>
-
-
-
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>5.2.0</version>
+		</dependency>
 
 
 
