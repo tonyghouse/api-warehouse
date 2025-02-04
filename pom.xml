@@ -8,7 +8,7 @@
 		<relativePath />
 	</parent>
 	<groupId>com.ghouse</groupId>
-	<artifactId>memoirist</artifactId>
+	<artifactId>api-warehouse</artifactId>
 	<version>0.0.1</version>
 	<name>api-warehouse</name>
 	<description>misc api project</description>
@@ -153,7 +153,7 @@
 
 		</plugins>
 
-		<finalName>memoirist-api</finalName>
+		<finalName>api-warehouse-api</finalName>
 	</build>
 
 
